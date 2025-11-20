@@ -1,0 +1,94 @@
+@import "tailwindcss";
+
+:root {
+  --purple-deep: #6d28d9;
+  --purple-royal: #8b5cf6;
+  --blue-primary: #3b82f6;
+  --gold-primary: #fbbf24;
+  --orange-primary: #f97316;
+  --green-emerald: #10b981;
+}
+
+.glass-panel {
+  background: rgba(255, 255, 255, 0.06);
+  backdrop-filter: blur(12px);
+  border: 1px solid rgba(255, 255, 255, 0.12);
+  box-shadow: 0 8px 32px rgba(31, 38, 135, 0.37);
+}
+
+.text-gradient-purple-gold {
+  background: linear-gradient(135deg, var(--purple-royal), var(--gold-primary));
+  -webkit-background-clip: text;
+  -webkit-text-fill-color: transparent;
+}
+
+.text-gradient-blue-gold {
+  background: linear-gradient(135deg, var(--blue-primary), var(--gold-primary));
+  -webkit-background-clip: text;
+  -webkit-text-fill-color: transparent;
+}
+
+.text-gradient-green-gold {
+  background: linear-gradient(135deg, var(--green-emerald), var(--gold-primary));
+  -webkit-background-clip: text;
+  -webkit-text-fill-color: transparent;
+}
+
+.text-gradient-orange-gold {
+  background: linear-gradient(135deg, var(--orange-primary), var(--gold-primary));
+  -webkit-background-clip: text;
+  -webkit-text-fill-color: transparent;
+}
+
+.section-hero { background-color: #000000; }
+.section-free-resources { background-color: #1a0a2e; }
+.section-problem { background-color: #0a1a2e; }
+.section-transformation { background-color: #1e3a8a; }
+.section-programs { background-color: #2563eb; }
+.section-testimonials { background: linear-gradient(135deg, #1e3a8a, #6d28d9); }
+.section-team { background-color: #1a0a2e; }
+.section-footer { background-color: #000000; }
+
+.scroll-to-top {
+  position: fixed;
+  bottom: 30px;
+  right: 30px;
+  width: 50px;
+  height: 50px;
+  background: linear-gradient(135deg, var(--purple-royal), var(--gold-primary));
+  border-radius: 50%;
+  display: flex;
+  align-items: center;
+  justify-content: center;
+  cursor: pointer;
+  opacity: 0;
+  visibility: hidden;
+  transition: all 0.3s ease;
+  z-index: 1000;
+}
+
+.scroll-to-top.visible {
+  opacity: 1;
+  visibility: visible;
+}
+
+@keyframes twinkle {
+  0%, 100% { opacity: 0.3; }
+  50% { opacity: 0.9; }
+}
+
+.star {
+  position: absolute;
+  background: white;
+  border-radius: 50%;
+  animation: twinkle 3s infinite;
+}
+
+* {
+  transition: all 0.3s ease;
+}
+
+body {
+  font-size: 18px;
+  line-height: 1.7;
+}
