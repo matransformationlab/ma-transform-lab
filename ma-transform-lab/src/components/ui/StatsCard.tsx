@@ -1,7 +1,7 @@
 import Card from "./Card";
 import { ReactNode } from "react";
 import AnimatedCounter from "./AnimatedCounter";
-
+import { cn } from "@/lib/utils";
 interface StatsCardProps {
   title: string;
   value: string | number;

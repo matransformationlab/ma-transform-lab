@@ -1,8 +1,9 @@
 /** @type {import('next').NextConfig} */
 const nextConfig = {
-  experimental: {
-    turbo: {}
-  }
-}
+  reactStrictMode: true,
+  images: {
+    domains: [],
+  },
+};
 
-module.exports = nextConfig
+module.exports = nextConfig;
