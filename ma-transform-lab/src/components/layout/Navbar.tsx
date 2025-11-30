@@ -1,4 +1,5 @@
 import Link from 'next/link';
+import Image from 'next/image';
 
 export default function Navbar() {
   return (
@@ -6,7 +7,10 @@ export default function Navbar() {
       <div className="max-w-7xl mx-auto px-4 sm:px-6 lg:px-8">
         <div className="flex justify-between items-center h-16">
           <Link href="/" className="flex items-center gap-2">
-            <span className="text-xl font-bold text-txt-primary">MA Transform Lab</span>
+            {/* Logo will go here - add your logo.jpg to public/ folder */}
+            <div className="text-2xl font-bold bg-gradient-to-r from-accent-purple to-accent-green bg-clip-text text-transparent">
+              MA TRANSFORM LAB
+            </div>
           </Link>
           <div className="flex items-center gap-6">
             <Link href="/assessment" className="text-txt-secondary hover:text-accent-purple transition-colors">
